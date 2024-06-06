@@ -1,0 +1,110 @@
+mat-card {
+  margin: 10px 0;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 200px;
+}
+
+.article-card {
+  width: calc(33.333% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+  visibility: visible;
+}
+
+.article-card.placeholder {
+  background-color: transparent;
+  border: none;
+  visibility: hidden;
+}
+
+.my-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-image {
+  height: 150px;
+  object-fit: cover;
+}
+
+mat-card-subtitle {
+  color: grey;
+  margin-bottom: 5px;
+}
+
+mat-card-title {
+  margin: 0;
+}
+
+mat-card-content {
+  margin: 5px 0 10px;
+}
+
+.card-date {
+  display: flex;
+  align-items: center;
+  font-size: 0.7em;
+}
+
+.card-date mat-icon {
+  font-size: 1.7em;
+  margin-right: 4px;
+}
+
+.search-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  display: block;
+}
+
+.result-section {
+  margin-bottom: 20px;
+}
+
+.result-text {
+  font-weight: 600;
+}
+
+.read-more {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.text {
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-right: 5px;
+}
+
+.arrow {
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.read-more:hover .text,
+.read-more:hover .arrow {
+  color: blue;
+}
+
+mat-card-actions {
+  padding: 15px 16px;
+}
+
+.search-field {
+  width: 50%;
+}

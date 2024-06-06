@@ -1,0 +1,61 @@
+<div class="search-container">
+  <mat-label class="search-label">Filter by keywords</mat-label>
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput [(ngModel)]="searchKeyword" (input)="filterArticles()" />
+  </mat-form-field>
+</div>
+
+<div class="result-section">
+  <p class="result-text">Results: {{ filteredArticles.length }}</p>
+  <mat-divider></mat-divider>
+</div>
+
+<div class="articles-container">
+  <div
+    class="article-card"
+    *ngIf="filteredArticles.length === 0"
+    class="no-articles-message"
+  >
+    No articles found.
+  </div>
+  <div *ngFor="let article of filteredArticles" class="article-card">
+    <mat-card class="my-card">
+      <img
+        class="header-image"
+        mat-card-image
+        [src]="article.imageUrl"
+        alt="{{ article.title }}"
+      />
+      <mat-card-header>
+        <mat-card-subtitle>
+          <div class="card-date">
+            <mat-icon matPrefix>date_range</mat-icon>
+            {{
+              article.publishedAt.toLocaleDateString(undefined, {
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+              })
+            }}
+          </div>
+        </mat-card-subtitle>
+        <mat-card-title
+          [innerHTML]="article.title | highlight : searchKeyword"
+          class="title"
+        ></mat-card-title>
+      </mat-card-header>
+      <mat-card-content
+        [innerHTML]="article.summary | highlight : searchKeyword : 100"
+        class="description"
+      >
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="read-more" [routerLink]="['/article', article.id]">
+          <span class="text">Read more</span>
+          <mat-icon class="arrow">arrow_forward</mat-icon>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

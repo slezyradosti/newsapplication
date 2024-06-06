@@ -1,0 +1,63 @@
+mat-card {
+  margin: 20px;
+}
+
+.article-header {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.article-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain, cover;
+  transform: scale(1);
+}
+
+.article-main {
+  padding: 20px;
+  position: relative;
+  top: -50px;
+}
+
+.article-content {
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  margin-bottom: 30px;
+  font-size: x-large;
+}
+
+.back-button {
+  display: block;
+  margin: 20px auto;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 56px;
+}
+
+.text {
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-right: 5px;
+}
+
+.arrow {
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+.back-button:hover .text,
+.back-button:hover .arrow {
+  color: blue;
+}

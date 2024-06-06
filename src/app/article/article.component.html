@@ -1,0 +1,17 @@
+<div class="article-header">
+  <img [src]="article?.imageUrl" alt="Header Image" />
+</div>
+<div class="article-main">
+  <div class="article-content">
+    <div class="title-container">
+      <mat-card-title>{{ article?.title }}</mat-card-title>
+    </div>
+    <mat-card-content>{{ article?.summary }}</mat-card-content>
+  </div>
+  <mat-card-actions>
+    <div class="back-button" [routerLink]="['']">
+      <mat-icon class="arrow">arrow_backward</mat-icon>
+      <span class="text">Read more</span>
+    </div>
+  </mat-card-actions>
+</div>
